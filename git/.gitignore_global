@@ -1,0 +1,49 @@
+# ===========================================================================
+# Global gitignore - ngxxfus/coder
+# Managed by dotfiles (stow: git/.gitignore_global -> ~/.gitignore_global)
+# ===========================================================================
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Compiled / build artifacts
+*.o
+*.a
+*.so
+*.out
+*.elf
+*.bin
+*.hex
+*.map
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+.venv/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Backup files (created by setup scripts)
+*.bak
+*.bak.*

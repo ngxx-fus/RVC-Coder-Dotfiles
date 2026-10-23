@@ -1,0 +1,34 @@
+# Backups created by setup scripts
+*.bak
+*.bak.*
+
+# Downloaded artifacts (not tracked)
+*.tar.gz
+*.zip
+*.tgz
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.pyc
+.env
+.venv/
+
+# Node
+node_modules/

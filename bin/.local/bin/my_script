@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# ===========================================================================
+# my_script - Personal utility script placeholder
+# Managed by dotfiles (stow: bin/.local/bin/my_script -> ~/.local/bin/my_script)
+# ===========================================================================
+
+echo "[INF] my_script: replace this with your own utility."

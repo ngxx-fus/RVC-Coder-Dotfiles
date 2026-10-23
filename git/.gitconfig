@@ -1,0 +1,28 @@
+[user]
+    name  = ngxxfus
+    email = ngxx.fus@gmail.com
+
+[core]
+    editor     = nvim
+    autocrlf   = input
+    excludesfile = ~/.gitignore_global
+
+[init]
+    defaultBranch = main
+
+[pull]
+    rebase = false
+
+[push]
+    autoSetupRemote = true
+
+[alias]
+    st  = status
+    co  = checkout
+    br  = branch
+    lg  = log --oneline --graph --decorate --all
+    undo = reset HEAD~1 --mixed
+    aliases = config --get-regexp alias
+
+[color]
+    ui = auto
