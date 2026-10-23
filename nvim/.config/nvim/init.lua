@@ -1,11 +1,8 @@
--- ===========================================================================
--- init.lua - Neovim entry point
--- Managed by dotfiles (stow: nvim/.config/nvim -> ~/.config/nvim)
--- Full config cloned from: https://github.com/ngxx-fus/neovim-conf.git
--- This file is a placeholder - the real config is managed by CoderSetupV2.sh
--- ===========================================================================
+--- @file init.lua
+--- @brief Main entry point for Neovim configuration
+--- @details Loads the main ngxxfus module which bootstraps all configuration
+--- @author ngxxfus
+--- @date 2025-11-30
 
--- Load core config
-require("config.options")
-require("config.keymaps")
-require("config.lazy")
+--- @brief Import and execute the main configuration module to apply all settings
+require("ngxxfus")

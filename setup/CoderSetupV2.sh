@@ -332,12 +332,12 @@ if [[ "${SETUP_NVIM_EN}" == "1" ]]; then
             sudo cp -vrf "${NIVM_INSTALL_DIRNAME}/." /opt/nvim
             sudo ln -sf /opt/nvim/bin/nvim /usr/local/bin/nvim
             echo "[INF] Created symlink /usr/local/bin/nvim -> /opt/nvim/bin/nvim"
-            if [ -d "${FOLDER_NVIM_CONFIG}" ]; then
+            if [ -d "${FOLDER_NVIM_CONFIG}" ] && [ ! -L "${FOLDER_NVIM_CONFIG}" ]; then
                 mv "${FOLDER_NVIM_CONFIG}" "${FOLDER_NVIM_CONFIG}.bak.$(date +%s)"
+                echo "[INF] Backed up existing non-symlink Neovim config"
             fi
-            MakeThisDirExist "${FOLDER_NVIM_CONFIG}"
-            echo "[INF] Cloning Neovim configuration repository..."
-            git clone --recurse-submodules "${URL_NEOVIM_CONF_REPO}" "${FOLDER_NVIM_CONFIG}"
+            MakeThisDirExist "$(dirname "${FOLDER_NVIM_CONFIG}")"
+            echo "[INF] Neovim config is managed by dotfiles/stow at ${FOLDER_NVIM_CONFIG}"
             rm -rf "${NVIM_TARBALL}" "./${NIVM_INSTALL_DIRNAME}"
             cd "${FOLDER_CURRENT}"
             echo ">>> Neovim installed successfully."

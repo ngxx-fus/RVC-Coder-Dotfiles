@@ -27,7 +27,7 @@ dotfiles/
 │   ├── .gitconfig
 │   └── .gitignore_global
 │
-├── nvim/                       # stow -> ~/.config/nvim
+├── nvim/                       # stow -> ~/.config/nvim (source of truth)
 │   └── .config/
 │       └── nvim/
 │           ├── init.lua
@@ -81,7 +81,7 @@ bash install.sh
 | Oh-My-Zsh | `~/.oh-my-zsh` | + ngxxfus theme |
 | Plugins | `~/.oh-my-zsh/custom/plugins/` | syntax-highlighting, autosuggestions, zsh-z |
 | Neovim nightly | `/opt/nvim` → `/usr/local/bin/nvim` | |
-| Neovim config | `~/.config/nvim` | cloned from ngxx-fus/neovim-conf |
+| Neovim config | `~/.config/nvim` | managed by dotfiles via stow |
 | Clangd 22.1.6 | `/opt/clangd` → `/usr/bin/clangd` | |
 | JLink V970 x86 | `~/workspace/JLink_V970` | |
 | JLink V970 ARM | `~/workspace/JLink_V970_Arm` | |
@@ -103,4 +103,6 @@ bash install.sh
 | `bin` | `~/.local/bin/` |
 | `bspwm` | `~/.config/bspwm/`, `~/.config/sxhkd/` (local only) |
 
-> **Note:** `bspwm` is skipped automatically in Coder workspace (headless environment).
+> **Note 1:** `bspwm` is skipped automatically in Coder workspace (headless environment).
+>
+> **Note 2:** Neovim config is now fully managed by `dotfiles/nvim/.config/nvim/` via GNU stow. `setup/CoderSetupV2.sh` installs the Neovim binary only and does not clone a separate config repo.
