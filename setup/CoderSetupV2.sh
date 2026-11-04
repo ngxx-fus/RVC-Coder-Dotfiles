@@ -33,7 +33,7 @@ export SETUP_JLINK_V950_EN=1
 export SETUP_JLINK_V950_ARM_EN=1
 export SETUP_JLINK_V970_EN=1
 export SETUP_JLINK_V970_ARM_EN=1
-export SETUP_NERD_FONTS_EN=1                # enable Nerd Fonts full pack installation
+export SETUP_NERD_FONTS_EN=0                # enable Nerd Fonts full pack installation
 
 export SETUP_CONN_CHECK_EN=1
 export SETUP_VALID_FILE_CHECK_FILE_EN=0     # temporarily not implemented/active
